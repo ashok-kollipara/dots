@@ -1,0 +1,26 @@
+# Reload sxkhd
+control + shift + r
+    pkill -USR1 -x sxhkd
+
+# Monitor select
+super + F3  
+    monitor_select
+
+# Browser Select
+super + F1
+    browser_select
+
+# Volume Controls
+super + {button4, button5} 
+    amixer -q set PCM {2%+,2%-};refresh_statusbar
+
+{XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
+    amixer -q set PCM {2%+,2%-,0%};refresh_statusbar
+
+# System power actions select
+super + F7
+    power_actions
+
+# Test Control
+super + F12
+    notify-send "$GNUPGHOME"

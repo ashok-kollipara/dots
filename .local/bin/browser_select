@@ -1,0 +1,13 @@
+#!/bin/bash
+
+choice=$(printf "%s\n" "Firefox" "Chromium" | dmenu -i -l 10 -p "Pick a browser to open : ")
+
+echo "$choice"
+
+case "$choice" in
+
+    Firefox) firefox ;;
+
+    Chromium) chromium ;;
+
+esac;

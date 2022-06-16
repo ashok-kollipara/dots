@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#Statusbar loop
+
+while true; do
+
+   dt=$(date +"%I:%M %p");
+
+   bat=$(battery_status)
+
+   builtin_vol=$(amixer sget Master | grep -oE -m 1 "[[:digit:]]{1,3}%")
+
+   ext_vol=$(amixer sget PCM | grep -oE -m 1 "[[:digit:]]{1,3}%") 
+
+   if [[ -z $builtin_vol ]];
+   then
+	   vol=$ext_vol
+   else
+	   vol=$builtin_vol
+   fi
+
+   volicon="🔊"
+
+   xsetroot -name "| $volicon $vol | $bat | $dt "
+
+   sleep 1m
+
+done &

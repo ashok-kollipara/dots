@@ -1,0 +1,17 @@
+#!/bin/bash
+
+choice=$(printf "%s\n" "Laptop" "HDMI" "VGA" "DUAL" | dmenu -i -l 10 -p "Pick a monitor for display")
+
+echo "$choice"
+
+case "$choice" in
+
+    Laptop) xrandr --output HDMI-1 --off --output VGA-1 --off --output LVDS-1 --primary --auto ;;
+
+    HDMI) xrandr --output LVDS-1 --off --output VGA-1 --off --output HDMI-1 --primary --auto ;;
+
+    VGA) xrandr --output LVDS-1 --off --output HDMI-1 --off --output VGA-1 --primary --auto ;;
+	
+    DUAL) xrandr --output HDMI-1 --auto --output LVDS-1 --primary --auto --output VGA-1 --auto;;
+
+esac;
