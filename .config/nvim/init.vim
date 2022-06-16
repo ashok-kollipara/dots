@@ -1,5 +1,5 @@
 "VIM-PLUG AREA
-call plug#begin('/home/uma/.local/share/nvim/plugged')
+call plug#begin('$HOME/.local/share/nvim/plugged')
 
 "------Themes section------
 "Plug 'dracula/vim' , {'as' : 'dracula'}

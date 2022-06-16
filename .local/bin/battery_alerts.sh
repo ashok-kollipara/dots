@@ -1,10 +1,10 @@
 #!/bin/bash
 
-full_icon="/home/uma/.config/pix/icons/full_battery.jpg"
-low_icon="/home/uma/.config/pix/icons/low_battery_plugin2.png"
+full_icon="$HOME/.config/pix/icons/full_battery.jpg"
+low_icon="$HOME/.config/pix/icons/low_battery_plugin2.png"
 
-full_sound="/home/uma/.config/sounds/positive_full_notification.wav"
-low_sound="/home/uma/.config/sounds/error-fail-notification.wav"
+full_sound="$HOME/.config/sounds/positive_full_notification.wav"
+low_sound="$HOME/.config/sounds/error-fail-notification.wav"
 
 full_level=98
 warning_level=15
@@ -43,4 +43,3 @@ do
     sleep 3m
 
 done
-
