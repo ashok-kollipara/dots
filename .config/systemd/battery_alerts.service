@@ -1,0 +1,14 @@
+[Unit]
+Description=Monitoring and Alert Service for low and full battery
+
+[Service]
+User=uma
+Environment=DISPLAY=:0
+Type=simple
+ExecStart=/home/uma/.local/bin/battery_alerts.sh
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
