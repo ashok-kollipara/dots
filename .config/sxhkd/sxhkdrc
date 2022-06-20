@@ -12,10 +12,10 @@ super + F1
 
 # Volume Controls
 super + {button4, button5} 
-    amixer -q set PCM {2%+,2%-};refresh_statusbar
+    volume_controls {up,down}
 
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
-    amixer -q set PCM {2%+,2%-,0%};refresh_statusbar
+    volume_controls {up,down,mute}
 
 # System power actions select
 super + F7

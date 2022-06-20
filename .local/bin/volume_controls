@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# Setup 
+builtin_vol=$(amixer sget Master 2>/dev/null | grep -oE -m 1 "[[:digit:]]{1,3}%")
+ext_vol=$(amixer sget PCM 2>/dev/null | grep -oE -m 1 "[[:digit:]]{1,3}%") 
+param=""
+vol_file="/tmp/volume"
+volicon="🔊"
+
+if [[ -z $builtin_vol ]];
+then
+   vol=$ext_vol
+   dev="PCM"
+else
+   vol=$builtin_vol
+   dev="Master"
+fi
+
+# Debug
+#printf "%s\n" "Built-In : $builtin_vol "
+#printf "%s\n" "External : $ext_vol "
+#printf "%s\n" "Device is : $dev "
+
+function vol_level () {
+
+    vol=$(amixer sget $dev 2>/dev/null | grep -oE -m 1 "[[:digit:]]{1,3}%") 
+
+    echo "$volicon $vol";
+    refresh_statusbar; # from ~/.local/bin/ to update xsetroot -name inside statusbar
+
+}
+
+function vol_action () {
+
+    if [[ -s $vol_file ]];
+    then
+        echo "Unmuted and Setting vol";
+        read -r vol < $vol_file;
+        amixer -q set $dev $vol;
+        cat /dev/null > $vol_file;
+
+    else
+        echo "volume action with $param";
+        amixer -q set $dev $param;
+        [[ "$param" == "0%" ]] && echo "$vol" > $vol_file && vol="0%";
+    fi
+
+    vol_level;
+} 
+
+
+case $1 in 
+
+    level) vol_level;;
+    up)echo "Volume $1" && param="2%+" && vol_action;;
+    down)echo "Volume $1" && param="2%-" && vol_action;;
+    mute)echo "Volume $1" && param="0%" && vol_action;;
+
+esac
