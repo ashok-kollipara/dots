@@ -29,8 +29,9 @@ export GNUPGHOME=$HOME/.config/gnupg/
 export LESSHISTFILE=-
 
 # See man termcap / terminfo for modes 
-# colorize less for bold text 
+# colorize less for bold text while viewing man pages 
 export LESS_TERMCAP_md=$'\e[1;33m'
+export LESS_TERMCAP_me=$'\e[0m'
 
 # For git gpg signing
 export GPG_TTY=$(tty)

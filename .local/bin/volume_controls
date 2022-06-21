@@ -7,6 +7,8 @@ param=""
 vol_file="/tmp/volume"
 volicon="🔊"
 
+touch $vol_file;
+
 if [[ -z $builtin_vol ]];
 then
    vol=$ext_vol

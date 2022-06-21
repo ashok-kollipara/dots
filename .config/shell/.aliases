@@ -11,9 +11,9 @@ alias gh='cd ~' # basically says 'go home'
 
 # Apps
 
-alias yt="ytfzf -t"
+alias yt="ytfzf -t" #  results with thumbnails 
 alias mpv="devour mpv"
-alias zathura="devour zathura"
+alias zathura="devour zathura" # devour is window swallower
 
 # GIT
 

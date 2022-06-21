@@ -8,7 +8,7 @@ while true; do
 
    bat=$(battery_status)
 
-   volume=$(volume_control level)
+   volume=$(volume_controls level)
 
    xsetroot -name "| $volume | $bat | $dt "
 
