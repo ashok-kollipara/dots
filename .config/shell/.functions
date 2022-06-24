@@ -1,0 +1,8 @@
+#!/bin/bash
+
+function mem () {
+    ram=$(free -m | awk 'FNR==2 {print $3/$2 * 100}' | cut -d . -f 1)
+    swap=$(free -m | awk 'FNR==3 {print $3/$2 * 100}' | cut -d . -f 1)
+    echo "RAM Usage: $ram%"
+    echo "SWAP Usage: $swap%"
+}
