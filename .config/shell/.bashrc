@@ -14,6 +14,9 @@ source $HOME/.config/shell/.aliases
 # Source the ENVIRONMENT variables
 source $HOME/.config/shell/.exports
 
+# Source the frequently used commands as functions
+source $HOME/.config/shell/.functions
+
 # Declutter the unwanted files
 [[ -f $HOME/.bash_history ]] && rm $HOME/.bash_history 2>/dev/null
 [[ -f $HOME/.bash_logout ]] && rm $HOME/.bash_logout 2>/dev/null

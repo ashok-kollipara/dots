@@ -11,8 +11,8 @@ super + F1
     browser_select
 
 # Volume Controls
-super + {button4, button5} 
-    volume_controls {up,down}
+super + {button4,button5,Alt_L} 
+    volume_controls {up,down,mute}
 
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
     volume_controls {up,down,mute}
@@ -20,6 +20,14 @@ super + {button4, button5}
 # System power actions select
 super + F7
     power_actions
+
+# xclip testing
+control + F1
+    xclip -o >> /tmp/clipstore
+
+# xclip testing
+control + F2
+    cat /tmp/clipstore | xclip -sel primary
 
 # Test Control
 super + F12
