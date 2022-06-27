@@ -1,8 +1,24 @@
 #!/bin/bash
 
+# get memory and top 5 processes for memory usaage
 function mem () {
     ram=$(free -m | awk 'FNR==2 {print $3/$2 * 100}' | cut -d . -f 1)
     swap=$(free -m | awk 'FNR==3 {print $3/$2 * 100}' | cut -d . -f 1)
-    echo "RAM Usage: $ram%"
-    echo "SWAP Usage: $swap%"
+
+    echo " RAM Usage: $ram%"
+    echo " SWAP Usage: $swap%"
+    printf "\n Top 5 processes are as below : \n\n"
+
+    ps axc -o ppid,pid,cmd,%cpu,%mem --sort=-%mem | head -n 6
+}
+
+# get filepath via find and fzf search 
+function fpath() {
+
+    echo "$(pwd)$(find -type f | fzf | sed 's/^.//g')"
+}
+
+# change into directory via find and fzf search 
+function cdir() {
+    cd $(find -type d | fzf )
 }

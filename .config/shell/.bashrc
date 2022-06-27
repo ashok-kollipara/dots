@@ -17,6 +17,9 @@ source $HOME/.config/shell/.exports
 # Source the frequently used commands as functions
 source $HOME/.config/shell/.functions
 
+# Source the custom completions 
+source $HOME/.config/shell/.completions
+
 # Declutter the unwanted files
 [[ -f $HOME/.bash_history ]] && rm $HOME/.bash_history 2>/dev/null
 [[ -f $HOME/.bash_logout ]] && rm $HOME/.bash_logout 2>/dev/null
