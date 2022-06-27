@@ -1,0 +1,9 @@
+#!/bin/bash
+
+_volume_controls_completions () {
+
+    COMPREPLY=($(compgen -W "up down mute" "${COMP_WORDS[1]}"))
+
+}
+
+complete -o nosort -F _volume_controls_completions volume_controls
