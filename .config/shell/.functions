@@ -14,7 +14,13 @@ function mem () {
 
 # change into directory via find and fzf search
 function cdir() {
-    cd $(find -type d | fzf )
+
+    if [[ -z "$1" ]]
+    then
+        cd $(find -type d | fzf)
+    else
+        cd $(find "$1" -type d | fzf)
+    fi
 }
 
 # get full filepath(s) via find and fzf
