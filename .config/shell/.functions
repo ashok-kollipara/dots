@@ -34,3 +34,13 @@ function fpath() {
         echo $item | sed -r "s#^.#$(pwd)#g"
     done
 }
+
+# pipe fapth to xcltp
+function rpath() {
+
+    echo "$(date +"%I:%M:%S")" >> /tmp/clipstore
+    fpath | tee -a /tmp/clipstore | xclip -r ;
+
+    notify-send "filepath(s) >> clipboard" "Also in /tmp/clipstore"
+
+}

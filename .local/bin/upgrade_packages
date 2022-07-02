@@ -34,7 +34,7 @@ sudo pacman -Sy
 
 # listing packages available
 
-printf "\n\e[0;36m Available updates are : \e[0m $(pacman -Qqu | tee /tmp/packlist )\n"
+printf "\n\e[0;36m Available updates are : \n\e[0m $(pacman -Qqu | tee /tmp/packlist )\n"
 
 printf "\n\n\e[0;36m No.of packages available are : \e[0;32m $(cat /tmp/packlist | wc -l) \e[0m \n"
 

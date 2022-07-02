@@ -21,14 +21,17 @@ super + {button4,button5,Alt_L}
 super + F7
     power_actions
 
-# xclip testing
+# copy selection file 
 control + F1
-    xclip -o >> /tmp/clipstore
+    session_clipboard --copy
 
-# xclip testing
+# retrieve selections later
 control + F2
-    cat /tmp/clipstore | xclip -sel primary
+    session_clipboard --paste
+
+control + F12
+    session_clipboard --reset
 
 # Test Control
 super + F12
-    notify-send "$GNUPGHOME"
+    refresh_statusbar && notify-send -t 2500 "refreshed statusbar"
