@@ -29,18 +29,19 @@ function fpath() {
 
     _flist=$(find -type f | fzf -m )
 
+    echo "$(date +"%I:%M:%S")" >> /tmp/clipstore
+
     for item in $_flist
     do
-        echo $item | sed -r "s#^.#$(pwd)#g"
+        echo $item | sed -r "s#^.#$(pwd)#g" | tee -a /tmp/clipstore
+        (( nl+=1 ))
     done
-}
 
-# pipe fapth to xcltp
-function rpath() {
+    # copy the last selection back to primary clipboard
+    echo "total $nl lines"
+    tail -n "$nl" /tmp/clipstore | xclip -r
 
-    echo "$(date +"%I:%M:%S")" >> /tmp/clipstore
-    fpath | tee -a /tmp/clipstore | xclip -r ;
+    notify-send -t 2500 "filepath(s) > clipboard" "Also >> /tmp/clipstore"
 
-    notify-send "filepath(s) >> clipboard" "Also in /tmp/clipstore"
-
+    nl=0
 }
