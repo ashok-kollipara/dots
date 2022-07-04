@@ -12,7 +12,7 @@ low_battery_icon="❗"
 
 case $charge_state in
 
-    Charging) echo "$charging_icon $charge_value%";;
+    Charging|Full) echo "$charging_icon $charge_value%";;
     Discharging) 
 	    if [[ $charge_value -le 20 ]]; then
 		    
