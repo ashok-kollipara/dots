@@ -1,86 +1,86 @@
-acpi 1.7-3
-alsa-firmware 1.2.4-2
-alsa-utils 1.2.7-1
-autoconf 2.71-1
-automake 1.16.5-1
-base 2-2
-binutils 2.38-6
-bison 3.8.2-4
-bluez 5.64-2
-bluez-utils 5.64-2
-dialog 1:1.3_20220526-1
-dosfstools 4.2-2
-dunst 1.9.0-1
-fakeroot 1.29-1
-feh 3.9-1
-file 5.42-1
-findutils 4.9.0-1
-firefox 102.0-1
-flex 2.6.4-3
-fontconfig 2:2.14.0-1
-fzf 0.30.0-3
-gawk 5.1.1-1
-gcc 12.1.0-2
-gdb 12.1-1
-gettext 0.21-2
-git 2.37.0-1
-google-chrome 103.0.5060.114-1
-grep 3.7-1
-groff 1.22.4-7
-grub 2:2.06.r261.g2f4430cc0-1
-gzip 1.12-1
-htop 3.2.1-1
-intel-ucode 20220510-1
-jq 1.6-4
-libnotify 0.7.12-1
-libtool 2.4.7-2
-libxft-bgra 2.3.4-1
-libxinerama 1.1.4-4
-linux 5.18.9.arch1-1
-linux-firmware 20220610.7b71b75-1
-linux-headers 5.18.9.arch1-1
-m4 1.4.19-1
-make 4.3-3
-man-db 2.10.2-1
-man-pages 5.13-1
-mpv 1:0.34.1-4
-mtools 1:4.0.40-1
-neofetch 7.1.0-2
-neovim 0.7.2-3
-networkmanager 1.38.2-1
-notification-daemon 3.20.0-4
-os-prober 1.80-1
-otf-symbola 13.00-8
-pacman 6.0.1-5
-patch 2.7.6-8
-pkgconf 1.8.0-1
-python-pip 22.1.2-1
-redshift 1.12-5
-sed 4.8-1
-sudo 1.9.11.p3-1
-sxhkd 0.6.2-2
-sxiv 26-1
-terminus-font 4.49.1-2
-texinfo 6.8-2
-tk 8.6.12-1
-tree 2.0.2-1
-ttf-font-awesome 6.1.1-1
-ttf-indic-otf 0.2-11
-ttf-jetbrains-mono 2.242-2
-ttf-joypixels 6.6.0-2
-ttf-symbola 13.00-8
-ueberzug 18.1.9-3
-ufw 0.36.1-1
-ungoogled-chromium 103.0.5060.53-2
-usbutils 014-2
-vim 9.0.0000-1
-which 2.21-5
-wireless_tools 30.pre9-3
-xclip 0.13-3
-xorg-server 21.1.3-7
-xorg-xev 1.2.4-1
-xorg-xinit 1.4.1-3
-xorg-xsetroot 1.1.2-3
-ytfzf 2.3-1
-zathura 0.4.9-1
-zathura-pdf-mupdf 0.3.8-1
+acpi
+alsa-firmware
+alsa-utils
+autoconf
+automake
+base
+binutils
+bison
+bluez
+bluez-utils
+dialog
+dosfstools
+dunst
+fakeroot
+feh
+file
+findutils
+firefox
+flex
+fontconfig
+fzf
+gawk
+gcc
+gdb
+gettext
+git
+google-chrome
+grep
+groff
+grub
+gzip
+htop
+intel-ucode
+jq
+libnotify
+libtool
+libxft-bgra
+libxinerama
+linux
+linux-firmware
+linux-headers
+m4
+make
+man-db
+man-pages
+mpv
+mtools
+neofetch
+neovim
+networkmanager
+notification-daemon
+os-prober
+otf-symbola
+pacman
+patch
+pkgconf
+python-pip
+redshift
+sed
+sudo
+sxhkd
+sxiv
+terminus-font
+texinfo
+tk
+tree
+ttf-font-awesome
+ttf-indic-otf
+ttf-jetbrains-mono
+ttf-joypixels
+ttf-symbola
+ueberzug
+ufw
+ungoogled-chromium
+usbutils
+vim
+which
+wireless_tools
+xclip
+xorg-server
+xorg-xev
+xorg-xinit
+xorg-xsetroot
+ytfzf
+zathura
+zathura-pdf-mupdf

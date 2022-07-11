@@ -1,6 +1,6 @@
-# Reload sxkhd
+# Reload sxhkd
 control + shift + r
-    pkill -USR1 -x sxhkd
+    pkill -USR1 -x sxhkd && notify-send "Restarted SXHKD"
 
 # Monitor select
 super + F3  
