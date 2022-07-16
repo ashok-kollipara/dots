@@ -39,6 +39,9 @@ libxinerama
 linux
 linux-firmware
 linux-headers
+linux-lts
+linux-lts-headers
+lshw
 m4
 make
 man-db
@@ -63,6 +66,7 @@ sxiv
 terminus-font
 texinfo
 tk
+tmux
 tree
 ttf-font-awesome
 ttf-indic-otf

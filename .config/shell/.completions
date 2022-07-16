@@ -2,7 +2,7 @@
 
 _volume_controls_completions () {
 
-    COMPREPLY=($(compgen -W "up down mute" "${COMP_WORDS[1]}"))
+    COMPREPLY=($(compgen -W "up down level mute" "${COMP_WORDS[1]}"))
 
 }
 
