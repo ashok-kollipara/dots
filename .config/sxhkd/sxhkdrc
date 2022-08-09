@@ -17,6 +17,11 @@ super + {button4,button5,Alt_L}
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
     volume_controls {up,down,mute}
 
+# Monitor Brightness Controls
+# Read man page for brightnessctl
+control + shift + {F10,F11} 
+    brightnessctl set {10%-,+10%}
+
 # System power actions select
 super + F7
     power_actions

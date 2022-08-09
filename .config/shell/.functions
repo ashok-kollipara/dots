@@ -45,3 +45,11 @@ function fpath() {
 
     nl=0
 }
+
+function sshkeyload() {
+
+    chosen_key=$(ls -1 $HOME/.ssh | fzf)
+    
+    eval $(ssh-agent) && ssh-add "$HOME/.ssh/$chosen_key"
+
+}

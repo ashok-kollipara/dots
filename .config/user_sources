@@ -1,13 +1,9 @@
 .
 ..
-chrome
 devour
 dmenu
 dwm
-dwm_bak.tar
 libxft-bgra
 options-oi
 st
-ttf-symbola
-xdgninja
 ytfzf

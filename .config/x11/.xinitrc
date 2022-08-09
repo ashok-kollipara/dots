@@ -1,5 +1,5 @@
 # Set Wallpaper
-/$HOME/.config/feh/setwallpaper &
+setwallpaper &
 
 # Statusbar
 statusbar &
