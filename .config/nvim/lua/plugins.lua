@@ -1,20 +1,13 @@
---VIM-PLUG AREA
+-- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
-local Plug = vim.fn['plug#']
-vim.call('plug#begin', '$HOME/.local/share/nvim/plugged')
+-- Only required if you have packer configured as `opt`
+vim.cmd [[packadd packer.nvim]]
 
---------Themes section------
---Plug 'dracula/vim' , {'as' : 'dracula'}
+return require('packer').startup(function(use)
+  -- Packer can manage itself
+  use 'wbthomason/packer.nvim'
 
-Plug 'mhartington/oceanic-next'
+  -- Load Grubox Theme
+  use 'morhetz/gruvbox'
 
-Plug 'EdenEast/nightfox.nvim'
-
-Plug 'morhetz/gruvbox'
-
-vim.call ('plug#end')
-
-
--- Select Loaded plugins
-
-vim.cmd('colorscheme gruvbox')
+end)
