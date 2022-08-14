@@ -55,6 +55,7 @@ patch
 pkgconf
 python-pip
 redshift
+rsync
 sudo
 sxhkd
 sxiv

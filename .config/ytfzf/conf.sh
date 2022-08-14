@@ -9,6 +9,9 @@ enable_hist=0
 enable_search_hist=0
 use_search_hist=0
 
+# disable cache
+keep_cache=0
+
 # log level - errors and warnings
 log_level=1
 
