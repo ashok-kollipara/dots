@@ -46,3 +46,6 @@ export HISTFILESIZE=0
 # Set Locale settings
 export LANG="en_US.UTF-8"
 export LC_MESSAGES="en_US.UTF-8"
+
+# API KEYS
+source $XDG_CONFIG_HOME/api_keys
