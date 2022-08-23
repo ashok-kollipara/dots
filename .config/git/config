@@ -1,0 +1,6 @@
+[user]
+    name = ashok-kollipara
+    email = 93081449+ashok-kollipara@users.noreply.github.com
+    signingkey = 174818BD
+[commit]
+    gpgsign = true
