@@ -11,6 +11,7 @@ bison
 bluez
 bluez-utils
 brightnessctl
+chromium
 dialog
 dosfstools
 dunst
@@ -52,6 +53,7 @@ notification-daemon
 openssh
 os-prober
 patch
+peek
 pkgconf
 python-pip
 redshift
@@ -70,6 +72,7 @@ ttf-jetbrains-mono
 ttf-joypixels
 ueberzug
 ufw
+unzip
 usbutils
 vim
 which
