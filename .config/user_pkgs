@@ -7,6 +7,7 @@ autoconf
 automake
 base
 bat
+bind
 bison
 bluez
 bluez-utils
@@ -58,6 +59,7 @@ pkgconf
 python-pip
 redshift
 rsync
+sqlectron
 sudo
 sxhkd
 sxiv

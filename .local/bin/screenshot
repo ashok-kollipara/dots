@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+fname=$(date +"%d%H%M%S")-screen.png
+ffmpeg -f x11grab -video_size 1280x720 -i $DISPLAY -vframes 1 ~/pix/screenshots/"$fname"
+
+notify-send "Screenshot $fname captured"
