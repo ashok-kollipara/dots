@@ -30,6 +30,10 @@ super + F7
 control + {F1,F2,F12}
     session_clipboard {--copy,--paste,--reset}
 
+# Screenshot full screen
+Print
+    screenshot
+
 # Test Control
 super + F12
     refresh_statusbar && notify-send -t 2500 "refreshed statusbar"

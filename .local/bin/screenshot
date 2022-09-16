@@ -1,6 +1,22 @@
 #!/usr/bin/env bash
 
-fname=$(date +"%d%H%M%S")-screen.png
-ffmpeg -f x11grab -video_size 1280x720 -i $DISPLAY -vframes 1 ~/pix/screenshots/"$fname"
+# capture filename and replace ' ' and '_' with '-' for easier autocomplete
+filename=$(printf '' | dmenu -sb orange -sf black -p 'Enter name for screenshot (.png)'| tr ' ,_' '-')
 
-notify-send "Screenshot $fname captured"
+screenlocation=$HOME/pix/screenshots
+
+if [[ -n "$filename" ]] # check if filename is empty or not
+then
+
+    filename="$filename"-screen.png
+
+    ffmpeg -f x11grab -video_size 1280x720 -i $DISPLAY -vframes 1 "$screenlocation/$filename"
+
+    # notify ok
+    notify-send -t 3000 "Screenshot $filename captured" "in $screenlocation"
+
+else
+
+    # notify about empty filename
+    notify-send -u critical -t 3000 "Enter non empty filename"
+fi
