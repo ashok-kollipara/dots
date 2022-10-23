@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Statusbar loop
+
+while true; do
+
+   dt=$(date +"%d %b | %I:%M %p");
+
+   bat=$(battery_status)
+
+   volume=$(volume_controls level)
+
+   xsetroot -name "| $volume | $bat | $dt "
+
+   sleep 1m
+
+done &

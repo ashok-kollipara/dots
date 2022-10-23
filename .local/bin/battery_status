@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#bat=$(acpi -i | grep -E "[[:digit:]]{1,2}:[[:digit:]]{1,2}" | grep -oE "[[:digit:]]{1,2}%")
+
+charge_value=$(cat /sys/class/power_supply/BAT?/capacity)
+charge_state=$(cat /sys/class/power_supply/BAT?/status)
+
+charging_icon="⚡"
+discharging_icon="🔋"
+low_battery_icon="❗"
+
+
+case $charge_state in
+
+    Charging|Full|Unknown) echo "$charging_icon $charge_value%";;
+    Discharging) 
+	    if [[ $charge_value -le 20 ]]; then
+		    
+		    echo "$low_battery_icon $charge_value%"
+	    else
+
+		    echo "$discharging_icon $charge_value%"
+	    fi
+	    ;;
+
+esac

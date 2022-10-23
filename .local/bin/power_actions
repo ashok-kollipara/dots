@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ $(pgrep -lx startx) ]];
+then
+    choice=$(printf "%s\n" "suspend" "poweroff" | dmenu -i -l 3 -p "Select System action : ")
+else
+    choice=$1
+fi
+
+[[ -z $choice ]] | st -e sudo systemctl $choice

@@ -1,0 +1,50 @@
+#!/bin/bash
+
+function pick_update_mode() {
+
+    printf "\nDo you wish upgrade ? Full [F] or Pick/Choose [P] or Abort [A] : " 
+
+    read choice
+
+    case $choice in 
+
+        F|f|full|Full|FULL) 
+            echo "You have chosen full system upgrade ";
+            sudo pacman -Su;
+            ;;
+
+        p|P|pick|Pick|PICK)
+            echo "You have chosen to pick your packages for upgrade ";
+            sudo pacman -S $(cat /tmp/packlist | fzf -m);
+            ;;
+        a|A|abort|Abort|n|N)
+            ;;
+        *)
+            ;;
+
+    esac
+}
+
+# performing package refresh
+printf "\n\e[0;36m Initializing updates, please enter password (if prompted) : \e[0m \n\n"
+
+sudo pacman -Sy 
+
+# listing packages available
+printf "\n\e[0;36m Available updates are : \n\e[0m $(pacman -Qqu | tee /tmp/packlist )\n"
+
+printf "\n\n\e[0;36m No.of packages available are : \e[0;32m $(cat /tmp/packlist | wc -l) \e[0m \n"
+
+# filter and notify for critical packages like kernel and grub
+printf "\n\n\e[0;33m Some critical packages available are : \e[0;31m \n \
+    $(cat /tmp/packlist | grep -E 'linux|grub') \
+    \e[0m \n"
+
+# call function to pick mode of upgrade
+pick_update_mode
+
+# Storing list of explicitly user installed packages 
+pacman -Qqe > $HOME/.config/user_pkgs
+
+# Storing list of explicitly user installed binaries from $HOME/.local/src/
+ls -a $HOME/.local/src/ > $HOME/.config/user_sources

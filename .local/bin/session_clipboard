@@ -1,0 +1,19 @@
+#!/bin/bash
+
+case $1 in 
+
+    # copy selection file 
+    -c|--copy)
+        echo "$(date +"%I:%M:%S")" >> /tmp/clipstore;
+        xclip -o >> /tmp/clipstore && notify-send -t 2000 "selection >> /tmp/clipstore/" "Available for session";;
+
+    # retrieve selections later
+    -v|--paste) 
+        cat /tmp/clipstore | xclip -r && notify-send -t 2000 "/tmp/clipstore > clipboard" "Ready to paste";;
+
+    -r|--reset)
+        cat /dev/null > /tmp/clipstore && notify-send -t 2000 "flushed /tmp/clipstore";;
+
+    *) notify-send "Check options properly";;
+
+esac

@@ -1,0 +1,39 @@
+# Reload sxhkd
+control + shift + r
+    pkill -USR1 -x sxhkd && notify-send "Restarted SXHKD"
+
+# Monitor select
+super + F3  
+    monitor_select
+
+# Browser Select
+super + F1
+    browser_select
+
+# Volume Controls
+super + {button4,button5,Alt_L} 
+    volume_controls {up,down,mute}
+
+{XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
+    volume_controls {up,down,mute}
+
+# Monitor Brightness Controls
+# Read man page for brightnessctl
+control + shift + {F10,F11} 
+    brightnessctl set {10%-,+10%}
+
+# System power actions select
+super + F7
+    power_actions
+
+# session clipboard controls 
+control + {F1,F2,F12}
+    session_clipboard {--copy,--paste,--reset}
+
+# Screenshot full screen
+Print
+    screenshot
+
+# Test Control
+super + F12
+    refresh_statusbar && notify-send -t 2500 "refreshed statusbar"

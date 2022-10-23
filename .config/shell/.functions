@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# get memory and top 5 processes for memory usaage
+function mem () {
+    ram=$(free -m | awk 'FNR==2 {print $3/$2 * 100}' | cut -d . -f 1)
+    swap=$(free -m | awk 'FNR==3 {print $3/$2 * 100}' | cut -d . -f 1)
+
+    echo " RAM Usage: $ram%"
+    echo " SWAP Usage: $swap%"
+    printf "\n Top 5 processes are as below : \n\n"
+
+    ps axc -o ppid,pid,cmd,%cpu,%mem --sort=-%mem | head -n 6
+}
+
+# change into directory via find and fzf search
+function cdir() {
+
+    if [[ -z "$1" ]]
+    then
+        cd $(find -type d | fzf)
+    else
+        cd $(find "$1" -type d | fzf)
+    fi
+}
+
+# get full filepath(s) via find and fzf
+# can be done with dmenu also
+function fpath() {
+
+    _flist=$(find -type f | fzf -m )
+
+    echo "$(date +"%I:%M:%S")" >> /tmp/clipstore
+
+    for item in $_flist
+    do
+        echo $item | sed -r "s#^.#$(pwd)#g" | tee -a /tmp/clipstore
+        (( nl+=1 ))
+    done
+
+    # copy the last selection back to primary clipboard
+    echo "total $nl lines"
+    tail -n "$nl" /tmp/clipstore | xclip -r
+
+    notify-send -t 2500 "filepath(s) > clipboard" "Also >> /tmp/clipstore"
+
+    nl=0
+}
+
+function sshkeyload() {
+
+    chosen_key=$(ls -1 $HOME/.ssh | fzf)
+    
+    eval $(ssh-agent) && ssh-add "$HOME/.ssh/$chosen_key"
+
+}

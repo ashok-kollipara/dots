@@ -1,0 +1,17 @@
+# read the 2 files 
+# 1 -> /var/lib/alsa/asound.state
+# 2 -> /usr/share/alsa/alsa.conf
+
+# this is from /usr/share/alsa/alsa.conf
+# set the default card to HDMI
+# with values from aplay -l or aplay -L
+
+# toshiba
+#defaults.pcm.card 1
+#defaults.ctl.card 1
+#defaults.pcm.device 3
+
+# hp envy
+defaults.pcm.card 1
+defaults.ctl.card 1
+defaults.pcm.device 0

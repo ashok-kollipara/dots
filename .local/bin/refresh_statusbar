@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# kill the sleep command in statusbar subprocess
+# to refresh instantaneously
+
+# Inspired from Luke Smith solution 
+
+kill $(pstree -lp | grep statusbar | sed "s/.*sleep//" | tr -d '\(,\)')
+
+# this can also be achieved by sending a kill SIGRTMIN signal from here
+# and catching the signal using the 'trap' command in statusbar refresh desired state
+# as done in bugswriter dotfiles

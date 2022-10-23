@@ -1,0 +1,17 @@
+#!/bin/bash
+
+_volume_controls_completions () {
+
+    COMPREPLY=($(compgen -W "up down level mute" "${COMP_WORDS[1]}"))
+
+}
+
+complete -o nosort -F _volume_controls_completions volume_controls
+
+_power_actions_completions () {
+
+    COMPREPLY=($(compgen -W "suspend poweroff" "${COMP_WORDS[1]}"))
+
+}
+
+complete -o nosort -F _power_actions_completions power_actions
