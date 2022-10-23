@@ -3,7 +3,7 @@
 # capture filename and replace ' ' and '_' with '-' for easier autocomplete
 filename=$(printf '' | dmenu -sb orange -sf black -p 'Enter name for screenshot (.png)'| tr ' ,_' '-')
 
-screenlocation=$HOME/pix/screenshots
+screenlocation=$HOME/multimedia/pix/screenshots
 
 if [[ -n "$filename" ]] # check if filename is empty or not
 then

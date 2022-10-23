@@ -1,3 +1,4 @@
 #!/bin/bash
-wall=$(ls .config/pix/walls/ | shuf | tail -n 1)
-feh --no-fehbg --bg-scale ~/.config/pix/walls/$wall &
+wall_path="$HOME/multimedia/pix/walls"
+wall=$(ls $wall_path | shuf | tail -n 1)
+feh --no-fehbg --bg-scale $wall_path/$wall &

@@ -1,1 +1,1 @@
-source /home/pavan/.config/shell/.exports
+source $HOME/.config/shell/.exports

@@ -12,6 +12,11 @@
 #defaults.pcm.device 3
 
 # hp envy
-defaults.pcm.card 1
-defaults.ctl.card 1
+# defaults.pcm.card 1
+# defaults.ctl.card 1
+# defaults.pcm.device 0
+
+# tower pc
+defaults.pcm.card 0
+defaults.ctl.card 0
 defaults.pcm.device 0

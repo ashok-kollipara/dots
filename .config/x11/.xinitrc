@@ -8,7 +8,6 @@
 
 picom --experimental-backends &
 
-
 # Statusbar loop
 while true; do
 
