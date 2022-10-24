@@ -5,6 +5,8 @@
 
 # $1 is device name for device or interface, for connection state change event this is empty
 # $2 is action value for change event for corresponding value of $1 argument
+#
+# both symlink and file to be owned by root:root
 
 interface=$1
 action=$2
