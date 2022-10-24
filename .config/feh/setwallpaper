@@ -1,4 +1,1 @@
-#!/bin/bash
-wall_path="$HOME/multimedia/pix/walls"
-wall=$(ls $wall_path | shuf | tail -n 1)
-feh --no-fehbg --bg-scale $wall_path/$wall &
+/home/ak/.local/bin/setwallpaper

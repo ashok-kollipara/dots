@@ -2,7 +2,7 @@
 #random wallpaper picking python script
 #in config file
 
-~/.config/feh/.fehbg &
+~/.config/feh/setwallpaper &
 
 # set window transparency with picom
 

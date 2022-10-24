@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+# https://wiki.archlinux.org/title/Mouse_acceleration
+# https://bbs.archlinux.org/viewtopic.php?id=252600
+# packages required xorg-xinput, libinput
+
+xinput --set-prop 11 'libinput Accel Speed' -0.5

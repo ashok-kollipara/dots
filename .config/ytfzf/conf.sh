@@ -1,7 +1,7 @@
 #Variables {{{
 
 # video preferences passed on to ytdlp-org
-video_pref="720"
+video_pref="1080"
 audio_pref="bestaudio/best"
 
 # history details
