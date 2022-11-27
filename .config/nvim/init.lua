@@ -1,14 +1,17 @@
+-- Load Plugins
+require('plugins-setup')
+
 -- Load Options
-require('options')
+require('core.options')
 
 -- Load Keymaps
-require('keymaps')
-
--- Load Plugins
-require('plugins')
+require('core.keymaps')
 
 -- Set colorscheme
-require('colorscheme')
+require('core.colorscheme')
 
 -- Load autocommands
-require('autocmds')
+require('core.autocmds')
+
+-- Load Lspconfig
+require('plugins.lsp_config')
