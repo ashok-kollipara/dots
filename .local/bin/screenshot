@@ -10,7 +10,7 @@ then
 
     filename="$filename"-screen.png
 
-    ffmpeg -f x11grab -video_size 1280x720 -i $DISPLAY -vframes 1 "$screenlocation/$filename"
+    ffmpeg -f x11grab -video_size 1920x1080 -i $DISPLAY -vframes 1 "$screenlocation/$filename"
 
     # notify ok
     notify-send -t 3000 "Screenshot $filename captured" "in $screenlocation"

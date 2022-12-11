@@ -42,3 +42,10 @@ require('lspconfig')['pyright'].setup({
     flags = lsp_flags,
     autostart = false
 })
+
+require('lspconfig')['gopls'].setup({
+    on_attach = on_attach,
+    flags = lsp_flags,
+    filetypes = {"go", "gomod"},
+    autostart = false
+})

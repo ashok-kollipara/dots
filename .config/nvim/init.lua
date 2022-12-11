@@ -15,3 +15,6 @@ require('core.autocmds')
 
 -- Load Lspconfig
 require('plugins.lsp_config')
+
+-- Load Treesitter
+require('plugins.treesitter_config')

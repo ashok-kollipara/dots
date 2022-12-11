@@ -8,12 +8,14 @@ alias la='ls -a --color=auto'
 alias ll='ls --color=auto -lah'
 alias grep='grep --color'
 alias gh='clear && cd ~' # basically says 'go home'
+alias fw='find . -type f | xargs grep -in --color'
 
 # Apps
 
 alias yt="ytfzf -t" #  results with thumbnails 
 alias mpv="devour mpv"
 alias zathura="devour zathura" # devour is window swallower
+alias fzf="fzf --reverse --height=25% --border=rounded --margin=2%"
 
 # GIT
 

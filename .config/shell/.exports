@@ -17,7 +17,7 @@ export BROWSER="firefox"
 export ZDOTDIR="$XDG_CONFIG_HOME/shell/zsh"
 
 # Add .local/bin/ to PATH
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$(go env GOPATH)/bin:$HOME/.local/bin
 
 # X settings
 export XAUTHORITY=/tmp/Xauthority # this worked
