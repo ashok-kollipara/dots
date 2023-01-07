@@ -49,3 +49,6 @@ export LC_MESSAGES="en_US.UTF-8"
 
 # API KEYS
 source $XDG_CONFIG_HOME/api_keys
+
+# AWS SAM TELEMETRY
+export SAM_CLI_TELEMETRY=0

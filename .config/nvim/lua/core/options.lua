@@ -35,3 +35,7 @@ vim.opt.smartindent = true -- Auto indent and Smart indent
 
 --sign column on left to show markers
 --vim.opt.signcolumn = "yes"
+
+-- List chars alert for trailing spaces, EOL
+vim.opt.listchars = {trail = '*', eol = '↵'}
+vim.opt.list = false

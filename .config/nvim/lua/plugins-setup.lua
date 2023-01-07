@@ -10,6 +10,8 @@ return require("packer").startup(function(use)
   use "neovim/nvim-lspconfig" -- Configurations for Nvim LSP 
   use "tpope/vim-surround" -- Surround words with character of choice like " , { , [
   use "nvim-lua/plenary.nvim" -- provide additional lua libraries for many plugins to work
+  use 'nvim-tree/nvim-web-devicons' -- web dev icons
+  use "lukas-reineke/indent-blankline.nvim" -- indent lines
 
   use {
   'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -28,6 +30,11 @@ return require("packer").startup(function(use)
   use {
 	"windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
-}
+  }
+
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
 
 end)

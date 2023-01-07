@@ -79,6 +79,16 @@ _G.packer_plugins = {
     path = "/home/ak/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/ak/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/ak/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["monokai.nvim"] = {
     loaded = true,
     path = "/home/ak/.local/share/nvim/site/pack/packer/start/monokai.nvim",
@@ -104,6 +114,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ak/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/ak/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
